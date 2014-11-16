@@ -2,7 +2,9 @@
 
 angular.module('trytonWebClient')
 .controller('BaseCtrl', [
-  function() {
-
+  '$scope',
+  'Base',
+  function($scope, Base) {
+    $scope.base = Base;
   }
 ]);

@@ -1,24 +1,15 @@
-<core-drawer-panel>
+<core-drawer-panel ng-init="base.getMenus()">
+
   <core-header-panel style="background: white" drawer>
+
     <core-toolbar>
       <span>Tryton</span>
     </core-toolbar>
-    <core-menu>
-      <core-submenu icon="folder" label="Party">
-        <core-item icon="book" label="Parties"></core-item>
-        <core-item icon="book" label="Addresses"></core-item>
-        <core-submenu icon="book" label="Categories">
-          <core-item icon="book" label="Categories"</core-item>
-        </core-submenu>
-      </core-submenu>
 
-      <core-submenu icon="folder" label="Sale">
-        <core-submenu icon="settings" label="Sales">
-          <core-item icon="book" label="Cart Sales"</core-item>
-        </core-submenu>
-        <core-item icon="book" label="Catalog Requests"></core-item>
-      </core-submenu>
+    <core-menu>
+      <core-submenu ng-repeat="menu in base.menus" icon="book" label="{{ menu.name }}"></core-submenu>
     </core-menu>
+
    </core-header-panel>
 
   <core-header-panel style="height:100%; background:#f2f2f2" main>
