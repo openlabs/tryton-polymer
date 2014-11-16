@@ -43,7 +43,6 @@ angular.module('trytonWebClient', [
         templateUrl: 'views/404.html'
       });
   })
-  /*
   .run(['$rootScope', '$state', 'session',
        function($rootScope, $state, session) {
          $rootScope.$on('tryton:NotLogged', function () {
@@ -58,4 +57,4 @@ angular.module('trytonWebClient', [
            }
          });
     }
-  ])*/;
+  ]);

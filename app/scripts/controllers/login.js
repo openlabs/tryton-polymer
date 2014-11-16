@@ -14,10 +14,7 @@ angular.module('trytonWebClient')
         serverUrl : tryton.serverUrl
       };
 
-      $scope.submit = function(form) {
-        if (form.$invalid) {
-          return;
-        }
+      $scope.submit = function() {
         $scope.loggingIn = true;
         tryton.serverUrl = $scope.user.serverUrl;
         session.doLogin($scope.user.database, $scope.user.username, $scope.user.password)
