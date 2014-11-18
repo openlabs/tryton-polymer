@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tryton Web Client</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <script src="bower_components/platform/platform.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <!-- build:vulcanized elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endbuild-->
+</head>
+
+<body fullbleed vertical layout unresolved ng-app="trytonWebClient">
+
+  <div ui-view></div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-tryton/src/tryton.min.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/base.js"></script>
+
+  <script src="scripts/services/base.js"></script>
+
+  <script>
+    (function(document) {
+     'use strict';
+
+     document.addEventListener('polymer-ready', function() {
+     });
+     // wrap document so it plays nice with other libraries
+     // http://www.polymer-project.org/platform/shadow-dom.html#wrappers
+     })(wrap(document));
+  </script>
+</body>
+
+</html>
